@@ -665,7 +665,7 @@ async def account_login(bot: Client, m: Message):
                 
             name = f'{str(count).zfill(3)}) {name1}'    
             Show = f"**Downloading:-**\n\n**Name :-** `{name}`\n\n**Url :-** `{url1}`"
-            prog = await bot.send_message(Show)
+            prog = await bot.send_message(sudo_groups,Show)
             cc = f'**Title »** {name1}.mkv\n**Caption »** {raw_text0}\n**Index »** {str(count).zfill(3)}'
             if "pdf" in url:
                 cmd = f'yt-dlp -o "{name}.pdf" "{url1}"'
@@ -698,9 +698,9 @@ async def account_login(bot: Client, m: Message):
 
                 start_time = time.time()
                 if "pdf" in url1:
-                    await bot.send_document(filename,caption=cc)
+                    await bot.send_document(sudo_groups,filename,caption=cc)
                 else:
-                    await bot.send_video(filename,supports_streaming=True,height=720,width=1280,caption=cc,duration=dur,thumb=thumbnail, progress=progress_bar,progress_args=(reply,start_time) )
+                    await bot.send_video(sudo_groups,filename,supports_streaming=True,height=720,width=1280,caption=cc,duration=dur,thumb=thumbnail, progress=progress_bar,progress_args=(reply,start_time) )
                 count+=1
                 os.remove(filename)
 
