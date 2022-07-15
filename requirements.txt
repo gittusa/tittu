@@ -6,3 +6,4 @@ yt-dlp
 ffmpeg
 aiohttp
 aiofiles
+asyncio
