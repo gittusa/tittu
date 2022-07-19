@@ -654,7 +654,7 @@ async def account_login(bot: Client, m: Message):
                     last02 = "video/" + last01 + "-49aced368452fa67022235a5c4b7055c-video-fd.m3u8"
                     list01.append(last02)
                 else:
-                    last02 = "videos/" + last01 + "-33948330.mp4.m3u8"
+                    last02 = "videos/" + last01 + "-3240523.mp4.m3u8"
                     list01.append(last02)
                 url1 = "/".join(list01)
                 
